@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:food_ordering_app/features/auth/splash_screen.dart';
+import 'package:food_ordering_app/features/main/presentation/pages/welcome_page.dart';
 
 void main() {
   runApp(
@@ -19,11 +19,12 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Campus Food Ordering',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        primarySwatch: Colors.orange,
         visualDensity: VisualDensity.adaptivePlatformDensity,
-        textTheme: GoogleFonts.latoTextTheme(),
+        textTheme: GoogleFonts.poppinsTextTheme(),
+        colorScheme: ColorScheme.fromSwatch(primarySwatch: Colors.orange).copyWith(secondary: Colors.teal),
       ),
-      home: const SplashScreen(),
+      home: const WelcomePage(),
     );
   }
 }
